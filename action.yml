@@ -12,6 +12,8 @@ outputs:
   image:
     description: 'Built docker image'
 runs:
-  main: retrieve.sh
+  steps:
+  - run: retrieve.sh
+    shell: bash
   args:
     - ${{ inputs.operatorSdkReleaseVersion }}
