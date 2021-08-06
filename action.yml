@@ -8,10 +8,6 @@ inputs:
   operatorSdkReleaseVersion:
     description: 'Operator SDK release version to use'
     required: false
-outputs:
-  image:
-    description: 'Built docker image'
 runs:
-  steps:
-    - run: retrieve.sh ${{ inputs.operatorSdkReleaseVersion }}
-      shell: bash
+  main: 'retrieve.sh'
+  shell: bash
