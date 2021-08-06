@@ -1,0 +1,17 @@
+name: 'Operator-SDK Retrieve Action'
+description: 'GitHub Actions for Operator-SDK retrieval'
+author: 'Sergio Arroutbi <sarroutb@redhat.com>'
+branding:
+  icon: 'package'
+  color: 'blue'
+inputs:
+  operatorSdkReleaseVersion:
+    description: 'Operator SDK release version to use'
+    required: false
+outputs:
+  image:
+    description: 'Built docker image'
+runs:
+  main: retrieve.sh
+  args:
+    - ${{ inputs.operatorSdkReleaseVersion }}
