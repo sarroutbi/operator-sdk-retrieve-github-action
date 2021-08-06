@@ -9,4 +9,5 @@ inputs:
     description: 'Operator SDK release version to use'
     required: false
 runs:
+  using: 'node12'
   main: 'retrieve.sh'
