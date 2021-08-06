@@ -10,4 +10,3 @@ inputs:
     required: false
 runs:
   main: 'retrieve.sh'
-  shell: bash
